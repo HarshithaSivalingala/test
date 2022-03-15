@@ -1,0 +1,18 @@
+.ui.menu.item{
+    color : rgb(28, 28, 36) !important;
+}
+
+.clickable:hover{
+    cursor: pointer;
+}
+
+.ui.menu .item.active{
+    background : #1164A3 !important;
+}
+
+.modal-content {
+    height: 500px;
+  }
+.modal-container{
+    height: 24.37500rem;
+  }
