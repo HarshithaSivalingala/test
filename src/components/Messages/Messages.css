@@ -1,6 +1,8 @@
 .messagecontent{
     height: 500px;
+    width: auto;
     overflow-y: scroll;
+    background-image: url("../../bgi.jpeg");
 }
 
 .messages{

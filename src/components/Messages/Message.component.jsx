@@ -61,7 +61,8 @@ const Messages = (props) => {
         let messagesToDisplay = searchTermState ? filterMessageBySearchTerm() : messagesState;
         if (messagesToDisplay.length > 0) {
             return messagesToDisplay.map((message) => {
-                return <MessageContent imageLoaded={imageLoaded} ownMessage={message.user.id === props.user.uid} key={message.timestamp} message={message} />
+                return <MessageContent imageLoaded={imageLoaded} key={message.timestamp} message={message} />
+                // ownMessage={message.user.id === props.user.uid}
             })
         }
     }
@@ -112,6 +113,7 @@ const Messages = (props) => {
     }
 
     return <div className="messages"><MessageHeader starChange={starChange} starred={isStarred()} isPrivateChat={props.channel?.isPrivateChat} searchTermChange={searchTermChange} channelName={props.channel?.name} uniqueUsers={uniqueusersCount()} />
+        <div class="ui grey inverted segment">
         <Segment className="messagecontent">
             <Comment.Group>
                 {displayMessages()}
@@ -119,6 +121,7 @@ const Messages = (props) => {
             </Comment.Group>
         </Segment>
         <MessageInput /></div>
+        </div>
 }
 
 const mapStateToProps = (state) => {

@@ -1,5 +1,5 @@
 .ui.menu .item{
-    color : rgb(180,180,185) !important;
+    color : rgba(6, 8, 8, 0.836) !important;
 }
 
 .clickable:hover{
@@ -7,5 +7,27 @@
 }
 
 .ui.menu .item.active{
-    background : #1164A3 !important;
+    background : #6aa4d1 !important;
+}
+
+.modal-content {
+    height: 500px;
+  }
+.modal-container{
+    height: 24.37500rem;
+    
+  }
+.clickable p{
+     color :hsla(0, 0%, 3%, 0.973);
+     float : left;
+     font-size: 15px; 
+     border-radius:5px;
+     float:left;
+     border-style:outset;
+
+}
+.channel p{
+  padding-top: 2px;
+  text-align:left;
+  margin-top:1px;
 }

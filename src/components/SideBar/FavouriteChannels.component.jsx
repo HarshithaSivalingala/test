@@ -23,10 +23,13 @@ const FavouriteChannels = (props) => {
 
     return <Menu.Menu >
         <Menu.Item style={{ fontSize: '17px' }}>
+        <div className="clickable">
+        <p>
             <span>
                 <Icon name="star" /> Starred
             </span>
             ({Object.keys(props.favouriteChannels).length})
+            </p></div>
         </Menu.Item>
         {displayChannels()}
     </Menu.Menu>

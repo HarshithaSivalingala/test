@@ -2,7 +2,8 @@ import React from 'react';
 import { Grid, Header, Icon, Image, Dropdown } from 'semantic-ui-react';
 import { connect } from "react-redux";
 import firebase from 'firebase';
-
+import Avatar from 'react-avatar';
+import logo from "../../konnect_logo.png";
 import "./UserInfo.css";
 
 const UserInfo = (props) => {
@@ -26,14 +27,19 @@ const UserInfo = (props) => {
             <Grid.Column>
                 <Grid.Row className="userinfo_grid_row">
                     <Header inverted as="h2">
-                        <Icon name="slack" />
-                        <Header.Content>Slack</Header.Content>
+                        <img src={logo}/>
+                        <Header.Content>Konnekt</Header.Content>
                     </Header>
                     <Header className="userinfo_displayname" inverted as="h4">
                         <Dropdown
                             trigger={
                                 <span>
-                                    <Image src={props.user.photoURL} avatar></Image>
+                                    <Avatar 
+                                    name={props.user.displayName}
+                                    size={35}
+                                    round='20px'
+                                    style={{marginRight:'5px'}}
+                                    />
                                     {props.user.displayName}
                                 </span>
                             }
